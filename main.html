@@ -8,25 +8,33 @@
             <div class="heading">
              <h2> Register here</h2>
             </div>
-<form >
+<form method="post" action=register.php>
 <div class="input">
 <label>Please enter your Vardhaman email ID</label>
+<input type="text" name="vemail" required>
+</div>
+<div class="input">
+<label>Name :</label>
+<input type="text" name="name" required>
+</div>
+<div class="input">
+<label>Roll number :</label>
+<input type="text" name="rno" required>
+</div>
+<div class="input">
+<label>Mobile Number :</label>
 <input type="text" name="vemail">
 </div>
 <div class="input">
-<label>Name</label>
-<input type="text" name="name">
+<label>Password :</label>
+<input type="Password" name="Password">
 </div>
 <div class="input">
-<label>Roll number</label>
-<input type="text" name="rno">
+<label>Confirm Password :</label>
+<input type="Password" name="Password">
 </div>
 <div class="input">
-<label>Mobile Number</label>
-<input type="text" name="vemail">
-</div>
-<div class="input">
-<label for="branch">Choose a car:</label>
+<label for="branch">Select your branch:</label>
 <select name="branch" id="branch">
   <option value="cse">COMPUTER SCIENCE ENGINEERING</option>
   <option value="it">INFORMATION TECHNOLOGY</option>
@@ -35,7 +43,14 @@
   <option value="eee">ELECTRONICS AND COMMUNICATION ENGINEERING</option>
 </select>
 </div>
-
+<div>
+<label for="year">Passed out year :</label>
+  <input type="number" id="year" name="year" min="2012" max="2025">
+</div>
+<div class="input">
+<button type="submit" name="Register" class="btn">REGISTER</button>
+</div>
+</form>
 
 
 </center>
