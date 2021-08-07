@@ -6,3 +6,12 @@ body{
     font-size: 120%;
     background:#e8a989;
 }
+.heading { 
+    width :30%;
+    padding: auto;
+    background: #187876;
+    text-align: center;
+    color: white;
+    margin:50px;
+
+}
