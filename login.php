@@ -1,4 +1,7 @@
-form method="post" action=login.php>
+<html>
+<body>
+ 
+ <form method="post" action=login.php>
 <div class="input">
 <label>Enter your Vardhaman email ID</label>
 <input type="text" name="vemail" pattern=".+@Vardhaman\.org" required>
@@ -9,9 +12,9 @@ form method="post" action=login.php>
 <input type="Password" name="Password">
 </div>
 <div class="input">
-<button type="submit" name="Register" class="btn">REGISTER</button>
+<button type="submit" name="Register" class="btn">LOG IN</button>
 </div>
-<p> Not a member yet? <a href="register.php">LOG IN </a><p>
+<p> Not a member yet? <a href="register.php"> REGISTER</a><p>
 
 
 
@@ -19,7 +22,7 @@ form method="post" action=login.php>
 
 
 
-</center>
+
 
  </body>
   </html>
