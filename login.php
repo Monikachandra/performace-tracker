@@ -8,12 +8,8 @@
  
  <form method="post" action=login.php>
 <div class="input">
-<<<<<<< HEAD
-    
-=======
->>>>>>> 2f942482480358d3387f25fed02c9168f898da6e
 <label>Enter your Vardhaman email ID</label>
-<input type="text" name="vemail" pattern=".+@Vardhaman\.org" required>
+<input type="text" name="vemail" pattern=".+@vardhaman\.org" required>
 </div>
 
 <div class="input">
