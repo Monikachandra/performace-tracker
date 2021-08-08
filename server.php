@@ -9,9 +9,12 @@ if(isset($_POST['register'])){
     $vemail=$_POST['num'];
     $vemail=$_POST['branch'];
     $vemail=$_POST['year'];
-    if(password!=password1)
-    echo "check the password which you have re-entered"
-    $q="INSERT INTO STUDENT(vemail,password,password1,name,rno,num,branch,year)"
+    if($password!=$password1)
+    echo "check the password which you have re-entered";
+    $pass=md5($password);
+
+    $sql="INSERT INTO STUDENT(vemail,password,password1,name,rno,num,branch,year) VALUES ('vemail','pass','password1','name','rno','num','branch','year')";
+    mysqli_query($db,$sql);
 
 
 }
