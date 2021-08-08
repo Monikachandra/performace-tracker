@@ -20,7 +20,7 @@
 <div class="input">
 <button type="submit" name="Register" class="btn">LOG IN</button>
 </div>
-<p> Not a member yet? <a href="register.html"> REGISTER</a><p>
+<p> Not a member yet? <a href="register.php"> REGISTER</a><p>
 
 
 
