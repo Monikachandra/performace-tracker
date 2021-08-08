@@ -12,7 +12,7 @@
 <form method="post" action=register.php>
 <div class="input">
 <label>Enter your Vardhaman email ID</label>
-<input type="text" name="vemail" pattern=".+@Vardhaman\.org" required>
+<input type="text" name="vemail" pattern=".+@vardhaman\.org" required>
 </div>
 
 <div class="input">
