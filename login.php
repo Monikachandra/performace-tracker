@@ -7,7 +7,6 @@
  
  <form method="post" action=login.php>
 <div class="input">
-    <!-- hello this is testing -->
 <label>Enter your Vardhaman email ID</label>
 <input type="text" name="vemail" pattern=".+@Vardhaman\.org" required>
 </div>
