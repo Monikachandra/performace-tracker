@@ -17,12 +17,12 @@
 
 <div class="input">
 <label>Password :</label>
-<input type="Password" name="Password">
+<input type="Password" name="password">
 </div>
 
 <div class="input">
 <label>Confirm Password :</label>
-<input type="Password" name="Password">
+<input type="Password" name="password1">
 </div>
 
 <div class="input">
@@ -59,7 +59,7 @@
 <div class="input">
 <button type="submit" name="register" class="btn">REGISTER</button>
 </div>
-<p> Have you already registerd? <a href="login.html">LOG IN </a><p>
+<p> Have you already registerd? <a href="login.php">LOG IN </a><p>
 
 
 
