@@ -1,6 +1,7 @@
 <?php include('logincheck.php');  ?>
 <html>
 <head>
+
  <title>Performance tracker</title>
  
  <link rel="stylesheet" type="text/css" href="style.css">
@@ -23,6 +24,7 @@
 <p> Not a member yet? <a href="register.php"> REGISTER</a><p>
 
 </form>
+
 
 </body>
   </html>
