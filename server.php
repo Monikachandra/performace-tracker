@@ -1,4 +1,4 @@
-<?php
+<?php include('server.php');
 if(isset($_POST['register'])){
     $vemail=$_POST['vemail'];
 

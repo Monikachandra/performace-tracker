@@ -1,19 +1,25 @@
-<pre><?php
-
-if ($_SERVER['REQUEST_METHOD']=='POST')
-{
-    $vemail = $_POST['vemail'];
-$password = $_POST['password'];
-require_once('dbConnect.php');
-$sql= "SELECT * FROM user WHERE vemail = '$vemail' AND password = '$password' ";
-$result = mysqli_query($con,$sql);
-$check = mysqli_fetch_array($result);
-if(isset($check)){
-echo 'success';
+<?php
+if(isset($_POST['Register'])){
+$email=$_POST['vemail'];
+$pass=$_POST['password'];
+if($email=="admin@vardhaman.org" && $pass=="admin1234"){
+header("Location: admin.php ");
+}
+$conn= new mysqli('localhost','root','','register');
+$stmt= $conn->prepare("select * from student where vemail=?");
+$stmt->bind_param("s",$email);
+$stmt->execute();
+$stmt_result=$stmt->get_result();
+if(($stmt_result->num_rows) >0){
+$data=$stmt_result->fetch_assoc();
+if($data['password']==$pass){
 header("Location: details.php ");
+}
+else{
 
-}else{
-echo 'failure';
+header("Location: login.php");
+
+}
 }
 }
 ?>
