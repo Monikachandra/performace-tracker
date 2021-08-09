@@ -9,7 +9,7 @@
             <div class="heading">
              <h2> Register here</h2>
             </div>
-<form method="post" action=server.php>
+<form method="post" action=login.php>
 <div class="input">
 <label>Enter your Vardhaman email ID</label>
 <input type="text" name="vemail" pattern=".+@vardhaman\.org" required>
