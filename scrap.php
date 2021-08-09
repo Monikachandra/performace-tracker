@@ -2,7 +2,9 @@
 if($_GET){
 $email=$_GET['user'];
 }
-$html = file_get_contents('https://www.codechef.com/users/geethamaale'); 
+$url='https://www.codechef.com/users/';
+$name=$email.$url;
+$html = file_get_contents($name); 
 $pokemon_doc = new DOMDocument();
 
 libxml_use_internal_errors(TRUE); //disable libxml errors
