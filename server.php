@@ -1,4 +1,4 @@
-<?php include('server.php');
+<?php ini_set("memory_limit", "1G"); 
 if(isset($_POST['register'])){
     $vemail=$_POST['vemail'];
 
