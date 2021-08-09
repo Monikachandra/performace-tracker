@@ -22,6 +22,7 @@ h1 {
 if($_GET){
 $email=$_GET['user'];
 }
+
 $conn= new mysqli('localhost','root','','register');
 $stmt= $conn->prepare("select * from student where vemail=?");
 $stmt->bind_param("s",$email);
@@ -66,7 +67,45 @@ echo "</tr>";
 
 echo "</table>";
 ?>
+<br>
+<br>
+<button onclick="myFunction()">codechef</button><br><br>
+<script>
+function myFunction(){
+<?php
+$html = file_get_contents('https://www.codechef.com/users/geethamaale'); //get the html returned from the following url
 
+$pokemon_doc = new DOMDocument();
+
+libxml_use_internal_errors(TRUE); //disable libxml errors
+
+if(!empty($html)){ //if any html is actually returned
+
+	$pokemon_doc->loadHTML($html);
+	libxml_clear_errors(); //remove errors for yucky html
+	
+	$pokemon_xpath = new DOMXPath($pokemon_doc);
+
+	//get all the h2's with an id
+	$pokemon_row = $pokemon_xpath->query('//*[@id="cumulative"]/div[1]/div[1]/div/a/text()[1]');
+
+	if($pokemon_row->length >0){
+		foreach($pokemon_row as $row){
+			$x=$row->nodeValue . "<br/>";
+			$y=substr($x,0,4);
+
+			$x=(int)$y;
+			header("Location: details.php?cf=".$x );
+		}
+	}
+
+
+}
+
+?>
+
+}
+</script>
 </body>
 </html>
 
