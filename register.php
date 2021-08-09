@@ -1,4 +1,5 @@
-<?php include('server.php'); ?>
+<?php include('server.php');
+ini_set("memory_limit", "1G"); ?>
 <html>
  <head>
  <title>Performance tracker</title>
