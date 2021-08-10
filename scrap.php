@@ -32,7 +32,7 @@ if(!empty($html)){ //if any html is actually returned
 			$st->execute();
 			$st->close();
 			$conn->close();
-			header("Location: details.php");
+			
 		}
 	}
 
