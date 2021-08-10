@@ -1,5 +1,4 @@
- 
-<html>
+ <html>
 <head>
 <style>
 table
@@ -64,18 +63,28 @@ echo "<tr>";
 echo "<td>PassOutYear</td>";
 echo "<td>" .$data['year']. "</td>";
 echo "</tr>";
-
 echo "</table>";
 ?>
+<form method="post" >
+<div class="input">
+<label>Enter your CODECHEF USERNAME</label>
+<input type="text" name="chef" >
+</div>
+</form>
 <br>
 <br>
 <button onclick="myFunction()">codechef</button><br><br>
 <script>
 function myFunction(){
-header("Location: details.php?user=".$email );
+
+//header("Location: details.php?user=".$email );
+
+<?php
+$x=$_POST['chef'];
+header("Location: scrap.php?cf=".$x );
+?>
 
 }
 </script>
 </body>
 </html>
-
