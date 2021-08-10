@@ -1,4 +1,7 @@
- <html>
+<?php
+session_start(); 
+?>
+<html>
 <head>
 <style>
 table
@@ -12,6 +15,7 @@ h1 {
   color: white;
 }
 </style>
+
 </head>
 <body bgcolor="#EEFDEF">
 <center>
@@ -21,7 +25,7 @@ h1 {
 if($_GET){
 $email=$_GET['user'];
 }
-
+$_SESSION["email"]=$email;
 $conn= new mysqli('localhost','root','','register');
 $stmt= $conn->prepare("select * from student where vemail=?");
 $stmt->bind_param("s",$email);
@@ -65,26 +69,26 @@ echo "<td>" .$data['year']. "</td>";
 echo "</tr>";
 echo "</table>";
 ?>
-<form method="post" >
+<form action="scrap.php" method="post" >
 <div class="input">
 <label>Enter your CODECHEF USERNAME</label>
 <input type="text" name="chef" >
+<input type="submit">
+</div>
+</form>
+<form action="scrap-codeforce.php" method="post" >
+<div class="input">
+<label>Enter your CODEFORCE USERNAME</label>
+<input type="text" name="chef" >
+<input type="submit">
+</div>
+</form>
+<form action="top10.php" method="post" >
+<div class="input">
+<button >GetTop10</button>
 </div>
 </form>
 <br>
 <br>
-<button onclick="myFunction()">codechef</button><br><br>
-<script>
-function myFunction(){
-
-//header("Location: details.php?user=".$email );
-
-<?php
-$x=$_POST['chef'];
-header("Location: scrap.php?cf=".$x );
-?>
-
-}
-</script>
 </body>
 </html>
